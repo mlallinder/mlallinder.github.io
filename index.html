@@ -2,49 +2,61 @@
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Font Awesome Icons  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
-        crossorigin="anonymous" />
+    <title>Matt Allinder</title>
+    <meta name="description" content="Matt Allinder — Sr. Software Development Manager. Husband, father, programmer, dev manager.">
+
+    <!-- Link previews (Slack, Teams, social) -->
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Matt Allinder">
+    <meta property="og:description" content="Sr. Software Development Manager. Husband, father, programmer, dev manager.">
+    <meta property="og:url" content="https://mlallinder.com/">
+    <meta property="og:image" content="https://mlallinder.com/imgs/avatar.jpg">
+    <meta name="twitter:card" content="summary">
+
+    <link rel="icon" href="imgs/avatar.jpg" type="image/jpeg">
+
+    <!-- Font Awesome 6 (includes the X logo) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- Roboto, only the weights the stylesheet uses -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="app.css">
-
-    <title>Matt Allinder's profile card</title>
-
 </head>
 
 <body>
-    <div class="profile_card">
+    <main class="profile_card">
         <div class="user_img">
-            <img src="./imgs/profile.png" height="100" width="100" alt="profile">
+            <img src="imgs/avatar.jpg" width="100" height="100" alt="Matt Allinder">
         </div>
         <div class="user_details">
-            <h5>Matt Allinder</h5>
+            <h1>Matt Allinder</h1>
             <span>Sr. Software Development Manager</span>
             <p>Husband, Father, Programmer, Dev Manager.</p>
         </div>
         <hr>
         <ul class="social-media-icons">
             <li>
-                <a href="https://www.facebook.com/mlallinder" style="background: linear-gradient(45deg, #2980b9, #2c3e50);"><i
-                        class="fab fa-facebook"></i></a>
+                <a class="github" href="https://github.com/mlallinder" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
             </li>
             <li>
-                <a href="https://twitter.com/mlallinder" style="background: linear-gradient(45deg, #00c9ff, #92fe9d);"><i
-                        class="fab fa-twitter"></i></a>
+                <a class="facebook" href="https://www.facebook.com/mlallinder" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
             </li>
             <li>
-                <a href="https://www.instagram.com/mattallinder/" style="background: linear-gradient(45deg, #833ab4,#fd1d1d, #fcb045);"><i
-                        class="fab fa-instagram"></i></a>
+                <a class="x" href="https://x.com/mlallinder" aria-label="X (Twitter)"><i class="fab fa-x-twitter" aria-hidden="true"></i></a>
+            </li>
+            <li>
+                <a class="instagram" href="https://www.instagram.com/mattallinder/" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
             </li>
         </ul>
-    </div>
+    </main>
 </body>
 
 </html>
