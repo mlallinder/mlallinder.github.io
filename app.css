@@ -1,28 +1,28 @@
-@import url("https://fonts.googleapis.com/css2?family=Baloo 2&family=Roboto:wght@300&display=swap");
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Roboto", cursive;
+    font-family: "Roboto", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
 body {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    margin-top: 10rem;
-    background-color: rgba(0, 0, 0, 0.9);
+    min-height: 100vh;
+    padding: 10rem 1rem 2rem;
+    background-color: #1a1a1a;
 }
 
 .profile_card {
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 35px 40px;
+    padding: 35px 24px;
     border-radius: 20px;
     position: relative;
     background: black;
@@ -45,10 +45,16 @@ body {
     border-radius: 50%;
     background: linear-gradient(45deg, deeppink, deepskyblue);
     box-shadow: 0px 0px 18px -6px #fff200;
-    animation: animate 1s linear infinite;
 }
 
-@keyframes animate {
+/* Only spin the ring for people who haven't asked their OS to reduce motion */
+@media (prefers-reduced-motion: no-preference) {
+    .user_img::before {
+        animation: spin 5s linear infinite;
+    }
+}
+
+@keyframes spin {
     from {
         transform: rotate(0deg);
     }
@@ -59,6 +65,7 @@ body {
 }
 
 .user_img img {
+    display: block;
     border-radius: 50%;
     z-index: 1;
 }
@@ -71,11 +78,11 @@ body {
     margin: 12px 14px;
 }
 
-.user_details h5 {
+.user_details h1 {
     font-size: 22px;
     letter-spacing: 2px;
     margin: 12px 0px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .user_details span {
@@ -84,6 +91,7 @@ body {
     letter-spacing: 2px;
     color: gray;
     font-size: 12px;
+    text-align: center;
 }
 
 .user_details p {
@@ -95,49 +103,28 @@ body {
     color: gray;
 }
 
-.user_details a {
-    text-decoration: none;
-    background: linear-gradient(45deg, #ff00cc, #333399);
-    color: white;
-    padding: 10px 30px;
-    margin: 14px 0;
-    border-radius: 20px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    font-size: 14px;
-    box-shadow: 0px 6px 22px -6px gray;
-    transition: 0.3s ease-in-out;
-}
-
-.user_details a:hover {
-    background: transparent;
-}
-
 hr {
     width: 100%;
-    border: 1px solid darkgray;
-    background: darkgray;
+    border: 0;
+    border-top: 1px solid darkgray;
     margin-bottom: 20px;
 }
 
 .social-media-icons {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    list-style: none;
 }
 
 .social-media-icons li {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0px 12px;
+    margin: 0 8px;
 }
 
-.social-media-icons li a {
-    height: 60px;
-    width: 60px;
+.social-media-icons a {
+    height: 52px;
+    width: 52px;
     font-size: 20px;
     color: white;
     display: flex;
@@ -146,16 +133,31 @@ hr {
     text-decoration: none;
     border-radius: 50%;
     margin: 10px 0;
+    transition: transform 0.2s ease-in-out;
 }
 
-.social-media-icons li p {
-    font-size: 20px;
-    margin: 11px 0;
-    font-weight: 700;
+.social-media-icons a:hover,
+.social-media-icons a:focus-visible {
+    transform: translateY(-3px);
 }
 
-.social-media-icons li span {
-    font-size: 15px;
-    color: gray;
-    font-weight: 700;
+.social-media-icons a:focus-visible {
+    outline: 2px solid white;
+    outline-offset: 3px;
+}
+
+.github {
+    background: linear-gradient(45deg, #24292e, #6e5494);
+}
+
+.facebook {
+    background: linear-gradient(45deg, #2980b9, #2c3e50);
+}
+
+.x {
+    background: linear-gradient(45deg, #14171a, #657786);
+}
+
+.instagram {
+    background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045);
 }
