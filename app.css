@@ -7,10 +7,11 @@
 
 body {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     min-height: 100vh;
-    padding: 10rem 1rem 2rem;
+    /* top padding leaves room for the avatar that overhangs the card */
+    padding: 6rem 1rem 2rem;
     background-color: #1a1a1a;
 }
 
@@ -89,7 +90,7 @@ body {
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 2px;
-    color: gray;
+    color: #a3a3a3;
     font-size: 12px;
     text-align: center;
 }
@@ -100,7 +101,7 @@ body {
     font-weight: 500;
     text-align: center;
     letter-spacing: 1px;
-    color: gray;
+    color: #a3a3a3;
 }
 
 hr {
@@ -125,7 +126,6 @@ hr {
 .social-media-icons a {
     height: 52px;
     width: 52px;
-    font-size: 20px;
     color: white;
     display: flex;
     justify-content: center;
@@ -146,6 +146,16 @@ hr {
     outline-offset: 3px;
 }
 
+.icon {
+    width: 22px;
+    height: 22px;
+    fill: currentColor;
+}
+
+.linkedin {
+    background: linear-gradient(45deg, #0a66c2, #004182);
+}
+
 .github {
     background: linear-gradient(45deg, #24292e, #6e5494);
 }
@@ -160,4 +170,16 @@ hr {
 
 .instagram {
     background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045);
+}
+
+/* Keep all five icons on one row on narrow phones */
+@media (max-width: 400px) {
+    .social-media-icons li {
+        margin: 0 4px;
+    }
+
+    .social-media-icons a {
+        height: 44px;
+        width: 44px;
+    }
 }
